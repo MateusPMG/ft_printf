@@ -16,3 +16,18 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <stdarg.h>
+
+typedef struct s_print
+{
+	va_list	args;
+	int		width;
+	int		precision;
+	int		zero;
+	int		point;
+	int		dash;
+	int		total_length;
+	int		sign;
+	int		is_zero;
+	int		percentage;
+	int		space;
+}	t_print;
