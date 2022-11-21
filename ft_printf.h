@@ -19,7 +19,7 @@
 
 typedef struct s_print
 {
-	va_list	args;
+	va_list	arguments;
 	int		width;
 	int		precision;
 	int		zero;
@@ -29,5 +29,4 @@ typedef struct s_print
 	int		sign;
 	int		is_zero;
 	int		percentage;
-	int		space;
 }	t_print;
