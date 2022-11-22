@@ -1,9 +1,24 @@
-NAME	=		libftprintf.a
+NAME	=	libftprintf.a
 
-CC		=		cc
+CC		=	gcc
 
-CFLAGS	=		-Wall -Wextra -Werror
+CFLAGS	=	-Wall -Werror -Wextra
 
-RM		=		rm -f
+RM		=	rm -f
 
-SRC = 
+SRC		=	ft_printf.c
+
+OBJ	=		$(SRC:.c=.o)
+
+all:		$(NAME)
+
+$(NAME):	$(OBJ)
+			ar -rcs $(NAME) $(OBJ)
+			
+clean:
+			$(RM) $(OBJ)
+
+fclean:		clean
+			$(RM) $(NAME)
+
+re:			fclean all

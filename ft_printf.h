@@ -14,19 +14,8 @@
 # define FT_PRINTF_H
 
 # include <unistd.h>
-# include <stdlib.h>
 # include <stdarg.h>
 
-typedef struct s_print
-{
-	va_list	arguments;
-	int		width;
-	int		precision;
-	int		zero;
-	int		point;
-	int		dash;
-	int		total_length;
-	int		sign;
-	int		is_zero;
-	int		percentage;
-}	t_print;
+int	ft_printf(const char *format, ...);
+
+#endif
